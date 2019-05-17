@@ -25,5 +25,8 @@ Starts_Date date,
 End_Date date,
 End_Time time,
 Comment varchar(64),
-Statuss bit
+Statuss bit,
+id int primary key identity
 )
+
+drop  table WorkOut_Active
