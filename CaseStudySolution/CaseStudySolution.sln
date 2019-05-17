@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyTest.Tests", "Case
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyWebAPI", "CaseStudyWebAPI\CaseStudyWebAPI.csproj", "{1FA01FE5-A6F0-4C5F-BBB0-4E88D06D479E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyAngular", "CaseStudyAngular\CaseStudyAngular.csproj", "{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{1FA01FE5-A6F0-4C5F-BBB0-4E88D06D479E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FA01FE5-A6F0-4C5F-BBB0-4E88D06D479E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FA01FE5-A6F0-4C5F-BBB0-4E88D06D479E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
