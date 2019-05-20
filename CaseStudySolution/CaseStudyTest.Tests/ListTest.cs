@@ -17,7 +17,6 @@ namespace CaseStudyTest.Tests
         {
             var obj = new CategoryRepo();
             var actual= obj.GetAll().Count();
-            
             var expected = 2;
             Assert.AreEqual(expected, actual);
         }

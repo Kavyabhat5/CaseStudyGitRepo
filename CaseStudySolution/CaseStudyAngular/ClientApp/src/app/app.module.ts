@@ -9,6 +9,11 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { CategoryService } from './category.service';
+import { CategoryComponent } from './category/category.component';
+import { EditComponent } from './edit/edit.component';
+import { componentFactoryName } from '@angular/compiler';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    CategoryComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -26,9 +33,11 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'list-Category', component: CategoryComponent },
+      { path: 'addcategory', component: AddComponent }
     ])
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CategoryService],
+  bootstrap: [AddComponent]
 })
 export class AppModule { }

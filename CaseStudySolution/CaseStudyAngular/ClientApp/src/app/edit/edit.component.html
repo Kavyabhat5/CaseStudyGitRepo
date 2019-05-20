@@ -1,0 +1,11 @@
+<form novalidate [formGroup]="frmCat" class="form-inline">
+  <div class="form-group col-md-4">
+    <input type="text" name="Category_Name" id="Category_id" formControlName="Category_Name" class="form-control" 
+     [ngClass]="{'is-valid':f.Category_Name.Valid}"/>
+
+  <button type="submit" class="btn btn-primary" style="margin-left:5px">Edit</button>
+  <button type="submit" class="btn btn-success" style="margin-left:5px">Update</button>
+  <button type="submit" class="btn btn-danger" style="margin-left:5px">Delete</button>
+
+</div>
+</form>

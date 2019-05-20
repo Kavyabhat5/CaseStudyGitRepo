@@ -15,20 +15,7 @@ namespace CaseStudyWebAPI.Controllers
         {
             return Ok(db.WorkOut_Category.ToArray());
         }
-        public IHttpActionResult Get(int Category_Id)
-        {
-            if (Category_Id < 0)
-            {
-                return BadRequest("Invalid SUPLNO  should be greater than 0");
-            }
-
-            var obj = db.WorkOut_Category.Find(Category_Id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-            return Ok(obj);
-        }
+       
         public IHttpActionResult Post(WorkOut_Category obj)
         {
             db.WorkOut_Category.Add(obj);

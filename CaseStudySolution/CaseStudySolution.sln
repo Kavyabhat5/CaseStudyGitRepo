@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyTest.Tests", "Case
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyWebAPI", "CaseStudyWebAPI\CaseStudyWebAPI.csproj", "{1FA01FE5-A6F0-4C5F-BBB0-4E88D06D479E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyAngular", "CaseStudyAngular\CaseStudyAngular.csproj", "{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaseStudyAngular", "CaseStudyAngular\CaseStudyAngular.csproj", "{2AE31721-BFAB-4AC0-A9B9-9AAD1CD1403E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

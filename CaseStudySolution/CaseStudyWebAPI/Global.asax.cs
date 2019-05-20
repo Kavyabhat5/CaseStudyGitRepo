@@ -13,5 +13,12 @@ namespace CaseStudyWebAPI
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+        protected void Application_BeginRequest()
+        {
+            if (HttpContext.Current.Request.HttpMethod == "OPTIONS")
+            {
+                HttpContext.Current.Response.Flush();
+            }
+        }
     }
 }

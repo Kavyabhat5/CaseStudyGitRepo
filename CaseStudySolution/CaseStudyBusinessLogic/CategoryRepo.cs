@@ -26,23 +26,7 @@ namespace CaseStudyBusinessLogic
             }
 
         }
-        public WorkOut_Category GetById(int Category_id)
-        {
-            try
-            {
-                using (CaseStudySqlEntities objcontext = new CaseStudySqlEntities())
-                {
-                    var query = (from obj in objcontext.WorkOut_Category
-                                 where obj.Category_id == Category_id
-                                 select obj).FirstOrDefault();
-                    return query;
-                }
-            }
-            catch (CaseException ex)
-            {
-                throw  ex;
-            }
-        }
+        
         
     }
 }
