@@ -30,3 +30,6 @@ id int primary key identity
 )
 
 drop  table WorkOut_Active
+
+insert into WorkOut_Category values ('Jogging')
+insert into WorkOut_Category values ('Walking')
