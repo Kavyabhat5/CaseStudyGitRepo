@@ -9,7 +9,7 @@ export class CategoryService {
   constructor(private http: HttpClient) {
 
   }
-  GetAll(): Observable<WorkOut_Category[]>
+  getCategory(): Observable<WorkOut_Category[]>
   {
     return this.http.get<WorkOut_Category[]>(this._url)
   }

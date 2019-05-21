@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form novalidate [formGroup]="fgWorkOut" (ngSubmit)="saveForm(fgWorkOut)" class="col-md-6">
+
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" name="Title" id="Title" formControlName="Title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <label>Note</label>
+          <textarea type="text" name="Note" id="Note" formControlName="Note" class="form-control"></textarea>
+
+        </div>
+
+        <div class="form-group form-inline">
+          <label>Calories burnt per min</label>
+          <input type="text" name="Calory" id="Calory" formControlName="Calory" class="form-control" value="{{count}}" />
+          <button type="submit" class="btn btn-success" (click)="increment()">+</button>
+          <button type="submit" class="btn btn-danger" (click)="decrement()">-</button>
+        </div>
+
+        <div class="form-group">
+          <label>Category</label>
+          <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          <button type="submit" class="btn btn-primary">+</button>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Add WorkOut</button>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</div>
+
+

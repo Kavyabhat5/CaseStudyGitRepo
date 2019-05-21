@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -14,6 +14,9 @@ import { CategoryComponent } from './category/category.component';
 import { EditComponent } from './edit/edit.component';
 import { componentFactoryName } from '@angular/compiler';
 import { AddComponent } from './add/add.component';
+import { AddWorkoutComponent } from './add-workout/add-workout.component'
+//import { AddWorkOutComponent } from './add-work-out.com'
+
 
 @NgModule({
   declarations: [
@@ -23,21 +26,27 @@ import { AddComponent } from './add/add.component';
     CounterComponent,
     FetchDataComponent,
     CategoryComponent,
-    AddComponent
+    AddComponent,
+    EditComponent,
+   // AddWorkCountComponent
+    AddWorkoutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,
+    FormsModule, ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'list-Category', component: CategoryComponent },
-      { path: 'addcategory', component: AddComponent }
+      { path: 'addcategory', component: AddComponent },
+      { path: 'editcategory', component: EditComponent },
+      // { path: 'addWorkout', component: AddWorkOutComponent }
+      { path: 'add-workout', component: AddWorkoutComponent },
     ])
   ],
   providers: [CategoryService],
-  bootstrap: [AddComponent]
+  bootstrap: [AddWorkoutComponent]
 })
 export class AppModule { }

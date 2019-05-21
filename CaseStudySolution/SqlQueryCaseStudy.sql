@@ -33,3 +33,4 @@ drop  table WorkOut_Active
 
 insert into WorkOut_Category values ('Jogging')
 insert into WorkOut_Category values ('Walking')
+select * from WorkOut_category

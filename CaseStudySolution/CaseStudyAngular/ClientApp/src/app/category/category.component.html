@@ -1,11 +1,15 @@
-<table class="table">
-<tr>
-  <th>Id</th>
-  <th>Name</th>
-<th></th>
-</tr>
-<tr *ngFor="let Category of categories">
-  <td>{{Category.Category_id}} </td>
-  <td>{{Category.Category_Name}}</td>
-  </tr>
-</table>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-add (CategoryAdded)="SaveCategory($event)"></app-add>
+    </div>
+    <div class="col-md-12">
+      <table>
+        <tr *ngFor="let cat of categories">
+          <app-edit [AddName]="cat" (EditAdded)="EditCategory($event)" (Deleted)="Delete($Event)"></app-edit>
+        </tr>
+      </table>
+    </div>
+ </div>
+  </div>

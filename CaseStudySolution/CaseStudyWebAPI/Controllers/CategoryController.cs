@@ -25,7 +25,7 @@ namespace CaseStudyWebAPI.Controllers
                 return StatusCode(HttpStatusCode.Created);
             }
             {
-                return BadRequest("Failed to add suppliers");
+                return BadRequest("Failed to add ");
             }
 
         }
@@ -40,7 +40,7 @@ namespace CaseStudyWebAPI.Controllers
             }
             else
             {
-                return BadRequest("Failed to update suppliers");
+                return BadRequest("Failed to update ");
             }
         }
         public IHttpActionResult Delete(int SUPLNO)

@@ -1,21 +1,21 @@
-/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
+﻿/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
 import { TestBed, async, ComponentFixture, ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { BrowserModule, By } from "@angular/platform-browser";
-import { CategoryComponent } from './category.component';
+import { AddWorkoutComponent } from './add-workout.component';
 
-let component: CategoryComponent;
-let fixture: ComponentFixture<CategoryComponent>;
+let component: AddWorkoutComponent;
+let fixture: ComponentFixture<AddWorkoutComponent>;
 
-describe('Category component', () => {
+describe('AddWorkout component', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ CategoryComponent ],
+            declarations: [ AddWorkoutComponent ],
             imports: [ BrowserModule ],
             providers: [
                 { provide: ComponentFixtureAutoDetect, useValue: true }
             ]
         });
-        fixture = TestBed.createComponent(CategoryComponent);
+        fixture = TestBed.createComponent(AddWorkoutComponent);
         component = fixture.componentInstance;
     }));
 
