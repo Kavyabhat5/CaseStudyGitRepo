@@ -9,12 +9,12 @@
 
         <tr>
 
-          <th>Name</th>
+          <th style="color:white">List Of categories:</th>
           <th></th>
         </tr>
         <tr *ngFor="let cat of categories">
 
-          <app-edit [AddName]="cat"></app-edit>
+          <app-edit [AddName]="cat" (Deleted)="Delete($event)"></app-edit>
 
           <td></td>
         </tr>

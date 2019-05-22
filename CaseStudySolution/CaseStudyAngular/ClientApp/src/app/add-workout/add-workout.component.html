@@ -4,34 +4,34 @@
       <form novalidate [formGroup]="fgWorkOut" (ngSubmit)="saveForm(fgWorkOut)">
 
         <div class="form-group">
-          <label>Title</label>
+          <label style="color:whitesmoke">Title</label>
           <input type="text" name="Title" id="Title" formControlName="Title" class="form-control" />
         </div>
 
         <div class="form-group">
-          <label>Note</label>
+          <label style="color:whitesmoke">Note</label>
           <textarea type="textarea" name="Note" id="Note" formControlName="Note" class="form-control"></textarea>
 
         </div>
 
         <div class="form-group form-inline">
-          <label>Calories burnt per min</label>
+          <label style="color:whitesmoke">Calories burnt per min</label>
           <input type="text" name="Calory" id="Calory" formControlName="Calory" class="form-control" value="{{count}}" />
           <button type="submit" class="btn btn-success" (click)="increment()">+</button>
           <button type="submit" class="btn btn-danger" (click)="decrement()">-</button>
         </div>
 
         <div class="form-group">
-          <label>Category</label>
-          <select>
-            <option *ngFor="let cat of categories">{{cat.Category_Name}}</option>
+          <label style="color:whitesmoke">Category</label>
+          <select >
+            <option *ngFor="let cat of categories" value="{{cat.Category_Id}}">{{cat.Category_Name}}</option>
 
           </select>
           <button type="submit" class="btn btn-primary">+</button>
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-success" [disabled]="!frmWorkout.valid">Add Workout</button>
+          <button type="submit" class="btn btn-success" [disabled]="!fgWorkOut.valid">Add Workout</button>
         </div>
 
       </form>

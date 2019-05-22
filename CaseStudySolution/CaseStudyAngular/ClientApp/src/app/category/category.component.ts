@@ -30,10 +30,19 @@ export class CategoryComponent implements OnInit {
 
   EditCategory($event) {
     this.service.update($event).subscribe(
-    (data) => alert('added'),
+    (data) => alert('updated'),
     (error) => alert("Failed to update")
   );
-}
-}
+  }
+  Delete($event) {
+    this.service.delete($event.Category_id).subscribe(
+      (data) => alert('Deleted'),
+      (error) => alert('Failed To Delete'),
+      
+    );
+  }
+
+  }
+
 
 

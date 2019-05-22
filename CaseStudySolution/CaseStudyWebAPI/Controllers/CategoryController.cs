@@ -11,7 +11,7 @@ namespace CaseStudyWebAPI.Controllers
     public class CategoryController : ApiController
     {
         CaseStudySqlEntities db = new CaseStudySqlEntities();
-        public IHttpActionResult GetAll()
+        public IHttpActionResult Get()
         {
             return Ok(db.WorkOut_Category.ToArray());
         }
@@ -43,9 +43,9 @@ namespace CaseStudyWebAPI.Controllers
                 return BadRequest("Failed to update ");
             }
         }
-        public IHttpActionResult Delete(int SUPLNO)
+        public IHttpActionResult Delete(int id)
         {
-            var obj = db.WorkOut_Category.Find(SUPLNO);
+            var obj = db.WorkOut_Category.Find(id);
             if (obj == null)
             {
                 return NotFound();

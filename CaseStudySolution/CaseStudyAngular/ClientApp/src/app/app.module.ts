@@ -39,14 +39,14 @@ import { AddWorkoutComponent } from './add-workout/add-workout.component'
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'list-Category', component: CategoryComponent },
-      { path: 'addcategory', component: AddComponent },
-      { path: 'editcategory', component: EditComponent },
+      { path: 'app-category', component: CategoryComponent },
+      { path: 'app-add', component: AddComponent },
+      { path: 'app-edit', component: EditComponent },
       // { path: 'addWorkout', component: AddWorkOutComponent }
-      { path: 'add-workout', component: AddWorkoutComponent },
+      { path: 'app-add-workout', component: AddWorkoutComponent },
     ])
   ],
   providers: [CategoryService],
-  bootstrap: [CategoryComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
