@@ -9,11 +9,11 @@ import { WorkOut_Category } from '../Category';
 })
 
 export class CategoryComponent implements OnInit {
-
+  
   categories: WorkOut_Category[];
   constructor(private service: CategoryService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.service.getCategory().subscribe(
       (data) => this.categories = data,
       (error) => alert("error processing request")
@@ -28,11 +28,12 @@ export class CategoryComponent implements OnInit {
     );
   }
 
-    EditCategory($event){
-      this.service.update($event).subscribe(
-        (data) => alert('updated'),
-        (error) => alert("Failed to update")
-      );
-    }
+  EditCategory($event) {
+    this.service.update($event).subscribe(
+    (data) => alert('added'),
+    (error) => alert("Failed to update")
+  );
 }
+}
+
 

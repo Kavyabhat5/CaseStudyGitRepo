@@ -1,8 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder, NgForm } from '@angular/forms'
 import { CategoryService } from '../category.service';
 import { WorkOut_Category } from '../Category';
+import { EventEmitter } from 'events';
+import { CategoryComponent } from '../category/category.component';
 
 @Component({
     selector: 'app-edit',
@@ -15,8 +17,9 @@ export class EditComponent implements OnInit {
 
   public click: boolean = false;
   fg: FormGroup;
+  categories: WorkOut_Category;
   @Input() AddName: WorkOut_Category;
-  constructor(private fb: FormBuilder, private service: CategoryService, private currentRoute: ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private service: CategoryService)  { }
 
 
   get f() {
@@ -26,22 +29,23 @@ export class EditComponent implements OnInit {
 
   ngOnInit() {
     this.fg = this.fb.group({
-      name: new FormControl(this.AddName.Category_Name, [Validators.required, Validators.minLength(3)])
+      Category_Name: new FormControl(this.AddName.Category_Name, [Validators.required, Validators.minLength(3)])
     });
-    let id = this.currentRoute.snapshot.paramMap.get('Category_id')
   }
-  saveform(frm: NgForm) {
+
+  saveForm(frm: NgForm) {
     if (frm.valid) {
-      let category: WorkOut_Category = new WorkOut_Category(frm.value.Category_id, frm.value.Category_Name);
-      this.service.update(category).subscribe(
+      let categories: WorkOut_Category = new WorkOut_Category(frm.value.Category_id, frm.value.Category_Name);
+      this.service.update(categories).subscribe(
         (data) => alert('Updated'),
         (error) => console.log(error));
     }
   }
-  public Enable(): void {
+  public enable(): void {
     this.f.Category_Name.enable();
-  }
-  public Disabled(): void {
+
+    }
+  public disabled(): void {
     this.f.Category_Name.disable();
   }
 }

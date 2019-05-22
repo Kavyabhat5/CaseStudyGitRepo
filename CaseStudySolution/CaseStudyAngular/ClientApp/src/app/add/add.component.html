@@ -1,11 +1,16 @@
-<form novalidate [formGroup]="fg" class="form-inline" (ngSubmit)="save(fg)">
+<form novalidate [formGroup]="fg" class="form-inline" (ngSubmit)="saveForm(fg)">
+
   <div class="form-group col-md-12">
-    <input type="text" name="Category_Name" id="Category_Name" formControlName="Category_Name" class="form-control"
-           [ngClass]="{'is-valid':f.Category_Name.Valid}" />
-  <div *ngIf="f.Category_Name.invalid && f.Category_Name.dirty && f.Category_Name.errors?.required" class="invalid-feedback">
-Category name should be given
-  </div>
-    <br/>
-    <button type="submit" [disabled]="!fg.valid" class="btn btn-success btn-lg">+</button>
+    <input type="text" name="Category_Name" id="Category_Name" formControlName="Category_Name" class="form-control" [ngClass]="{'is-valid': f.Category_Name.valid,'is-invalid': f.Category_Name.invalid && f.Category_Name.dirty}" >
+    <div *ngIf="f.Category_Name.invaild && f.Category_Name.dirty && f.Category_Name.errors?.required" class="invalid-feedback">
+      required
     </div>
-  </form>
+    <br />
+    <button type="submit" [disabled]="!fg.valid" class="btn btn-success">+</button>
+
+    
+
+  </div>
+
+</form>
+

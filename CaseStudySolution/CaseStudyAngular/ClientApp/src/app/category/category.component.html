@@ -5,11 +5,21 @@
       <app-add (CategoryAdded)="SaveCategory($event)"></app-add>
     </div>
     <div class="col-md-12">
-      <table>
+      <table class="table">
+
+        <tr>
+
+          <th>Name</th>
+          <th></th>
+        </tr>
         <tr *ngFor="let cat of categories">
-          <app-edit [AddName]="cat" (EditAdded)="EditCategory($event)" (Deleted)="Delete($Event)"></app-edit>
+
+          <app-edit [AddName]="cat"></app-edit>
+
+          <td></td>
         </tr>
       </table>
     </div>
- </div>
   </div>
+</div>
+

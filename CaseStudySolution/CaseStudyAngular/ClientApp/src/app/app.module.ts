@@ -47,6 +47,6 @@ import { AddWorkoutComponent } from './add-workout/add-workout.component'
     ])
   ],
   providers: [CategoryService],
-  bootstrap: [AddWorkoutComponent]
+  bootstrap: [CategoryComponent]
 })
 export class AppModule { }
